@@ -69,9 +69,9 @@
 
           var tableNumber = i + 1;
 
-          $("#table-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "</span> | " + tableData[i].customerName + "</h2>");
+          $("#table-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "</span> | " + Data[i].customerName + "</h2>");
 
-      } else if {
+      } else {
         // append to waitlist
         var waitlist = $("<div>");
           waitlist.addClass("listwait");
@@ -80,13 +80,13 @@
 
           var tableNumber = i + 1;
 
-          $("#waitlist-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "</span> | " + waitlistData[i].customerName + "</h2>");
+          $("#waitlist-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "</span> | " + Data[i].customerName + "</h2>");
       }
 
     }
 
   } else {
-    // no reservations
+    console.log("No Reservations");
   }
 });
 
