@@ -32,7 +32,7 @@
           <div class="panel-heading">
             <h4 class="panel-title">Current Reservations</h4>
           </div>
-          <div class="panel-body" id="tableSection">
+          <div class="panel-body" id="table">
           </div>
         </div>
 
@@ -40,7 +40,7 @@
           <div class="panel-heading">
             <h4 class="panel-title">Waiting List</h4>
           </div>
-          <div class="panel-body" id="waitlistSection">
+          <div class="panel-body" id="waitlist">
           </div>
         </div>
       </div>
@@ -61,9 +61,26 @@
     for (var i = 0; i < data.length; i++) {
         // for each reservation do something
       if (i < 5) {
-        // append to tables
-      } else {
+        // append to table
+          var tableList = $("<div>");
+          tableList.addClass("tablist");
+          tableList.attr("id", "table-" + i + 1);
+          $("#table").append(tableList);
+
+          var tableNumber = i + 1;
+
+          $("#table-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "</span> | " + tableData[i].customerName + "</h2>");
+
+      } else if {
         // append to waitlist
+        var wait = $("<div>");
+          waitlist.addClass("listwait");
+          waitlist.attr("id", "waitlist-" + i + 1);
+          $("#waitlist").append(wait);
+
+          var tableNumber = i + 1;
+
+          $("#waitlist-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "</span> | " + waitlistData[i].customerName + "</h2>");
       }
 
     }
