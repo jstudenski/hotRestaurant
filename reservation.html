@@ -26,7 +26,7 @@
         <form role="form">
         	<div class="form-group">
                <label for="CustomerName">Name</label>
-               <input type="text" class="form-control" id="CustomerName">
+               <input type="text" class="form-control" id="customerName">
             </div>
 
             <div class="form-group">
@@ -44,7 +44,7 @@
               <input type="text" class="form-control" id="customerID">
             </div>
 
-            <button type="submit" class="btn btn-primary submit">Submit</button>
+            <button type="submit" class="btn btn-primary submit" id="add-btn">Submit</button>
             </form>
           </div>
         </div>
@@ -70,7 +70,7 @@
       // Question: What does this code do??
       $.post("/api/new", newReservation)
       .then(function(data) {
-        conso			le.log(data);
+        console.log(data);
         alert("Adding reservation...");
       });
 
